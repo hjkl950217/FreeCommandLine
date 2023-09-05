@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\SDKPulishNuget.targets" />
+
+  <PropertyGroup>
+    
+    <TargetFramework>net6.0</TargetFramework>
+    <Description>一个轻松使用的命令行构建库 https://github.com/hjkl950217/FreeCommandLine </Description>
+    
+    <PackageProjectUrl>https://github.com/hjkl950217/FreeCommandLine</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hjkl950217/FreeCommandLine</RepositoryUrl>
+    
+ 
+  </PropertyGroup>
+
+</Project>
