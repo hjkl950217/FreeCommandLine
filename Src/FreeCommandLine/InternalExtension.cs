@@ -1,7 +1,12 @@
 ﻿namespace FreeCommandLine
 {
-    public static class ConstLExtension
+    /// <summary>
+    /// 类库中的扩展方法
+    /// </summary>
+    public static class InternalExtension
     {
+        #region Object
+
         /// <summary>
         /// 如果为null则抛出异常。
         /// </summary>
@@ -17,5 +22,7 @@
                 throw new ArgumentException(string.Format(ConstL.NotCanBeNull, argName));
             }
         }
+
+        #endregion Object
     }
 }
