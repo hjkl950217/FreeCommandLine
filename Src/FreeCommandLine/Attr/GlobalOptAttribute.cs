@@ -9,6 +9,8 @@
         Inherited = false)]
     public class GlobalOptAttribute : ModelBaseAttr
     {
+        public object Default { get; set; }
+
         /// <summary>
         ///
         /// </summary>

@@ -9,12 +9,22 @@
         Inherited = true)]
     public class ValueAttribute : ModelBaseAttr
     {
-        public byte Index { get; set; }
+        public byte Index { get; }
 
+        /// <summary>
+        /// 标记属于那个选项
+        /// </summary>
+        public string OptFor { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="index"></param>
         public ValueAttribute(byte index = 0)
            : base(false)
         {
             this.Index = index;
+            this.OptFor = string.Empty;
         }
     }
 }

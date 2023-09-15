@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        public static async Task Main(string[] args)
+        public static void Main(string[] args)
         {
             string warning = "warn";
             string error = "error";
@@ -12,13 +12,21 @@
             ShowInfo(warning, paddingAmount);
             ShowInfo(error, paddingAmount);
 
-            Console.ReadLine();
-
             //var table = new ConsoleTable("one", "two", "three");
             //table.AddRow(1, 2, 3)
             //     .AddRow("this line should be longer", "yes it is", "oh");
             //// 打印
             //table.Write();
+
+            Console.WriteLine("==================");
+
+            IReadOnlyDictionary<string, Delegate> deleDic = ExpHelper.ResoleToProp(typeof(TestGlobalOpt));
+            Delegate deleA = deleDic[nameof(TestGlobalOpt.Host)];
+
+            TestGlobalOpt testOpt = new TestGlobalOpt();
+            deleA.DynamicInvoke(testOpt, "123");
+            Console.WriteLine(testOpt.Host);
+            Console.ReadLine();
         }
 
         public static void ShowInfo(string str, int lenght)
